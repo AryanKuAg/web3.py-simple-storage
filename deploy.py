@@ -1,9 +1,10 @@
 # import compile_standard from solcx
 from solcx import compile_standard, install_solc
+from web3 import Web3
 
 with open("./SimpleStorage.sol",  'r') as f:
     simpleStorage = f.read()
-    print(simpleStorage)
+    # print(simpleStorage)
 
 # Compile our solidity
 install_solc("0.8.11")
@@ -19,4 +20,4 @@ compiled_sol = compile_standard(
     solc_version="0.8.11"
 )
 
-print(compiled_sol)
+# print(compiled_sol)
