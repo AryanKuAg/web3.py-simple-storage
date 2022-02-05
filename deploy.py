@@ -44,9 +44,10 @@ abi = data["contracts"]["SimpleStorage.sol"]["SimpleStorage"]["abi"]
 # print(abi)
 
 # to connect to ganache
-w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:8545"))
-chain_id = 1337
-my_address = '0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1'
+w3 = Web3(Web3.HTTPProvider(
+    "https://rinkeby.infura.io/v3/8694738a5f584568bb375a2e44f50073"))
+chain_id = 4
+my_address = '0xCD68fB5449c5Cc1c09F430Cb90c2c0A89e8eF1Ad'
 private_key = os.getenv("PRIVATE_KEY")
 
 config = dotenv_values(".env")
